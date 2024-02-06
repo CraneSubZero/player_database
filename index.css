@@ -18,3 +18,11 @@ body {
     border-radius: 5px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
+
+
+.main {
+    background-image: url(img/icon.gif), url(img/img1.png);
+    background-position: left center, right center;
+    background-size: 250px, 620px;
+    background-repeat: no-repeat, no-repeat;
+}
