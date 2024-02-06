@@ -39,7 +39,7 @@
 
     <?php
     //create database connection
-    $conn = new mysqli("localhost", "root", "", "php");
+    $conn = new mysqli("localhost", "root", "", "player_database");
 
     //construct sql state
     $sql = 'SELECT * FROM player_database';
@@ -51,10 +51,12 @@
       <table class="table table-border">
         <thead>
           <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Action</th>
+            <th scope="col">ID</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Game Name</th>
+            <th scope="col">IGN</th>
+            <th scope="col">Position</th>
           </tr>
         </thead>
         <tbody>
