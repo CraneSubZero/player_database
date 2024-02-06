@@ -5,29 +5,40 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Student Information</title>
-
-
+  <title>Player-List Management System</title>
+   <link rel="stylesheet" href="index.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
 </head>
 
 <body>
-  <div class="container">
+   <div class="container">
     <form action="add-student.php" method="POST">
       <div class="row">
         <div class="col-lg-3"></div>
         <div class="col-lg-4">
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Firstname:</label>
+          <div class="mb-4">
+            <label for="exampleFormControlInput1" class="form-label">First Name:</label>
             <input name="firstname" type="text" class="form-control" />
           </div>
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Lastname:</label>
+          <div class="mb-4">
+            <label for="exampleFormControlInput1" class="form-label">Last Name:</label>
             <input name="lastname" type="text" class="form-control" />
           </div>
+          <div class="mb-4">
+            <label for="exampleFormControlInput1" class="form-label">Game Name:</label>
+            <input name="gamename" type="text" class="form-control" />
+          </div>
+          <div class="mb-4">
+            <label for="exampleFormControlInput1" class="form-label">IGN:</label>
+            <input name="ign" type="text" class="form-control" />
+          </div>
+          <div class="mb-4">
+            <label for="exampleFormControlInput1" class="form-label">Position:</label>
+            <input name="position" type="text" class="form-control" />
+          </div>
 
-          <div class="mb-3">
+          <div class="mb-4">
             <button type="submit" class="btn btn-success">Add Record</button>
           </div>
 
@@ -35,8 +46,9 @@
 
       </div>
     </form>
+</div>
 
-
+  <br>
     <?php
     //create database connection
     $conn = new mysqli("localhost", "root", "", "player_database");
@@ -46,7 +58,7 @@
 
     $result = $conn->query($sql);
     ?>
-
+  <div class="container">
     <div class="row">
       <table class="table table-border">
         <thead>
