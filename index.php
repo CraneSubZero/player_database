@@ -13,6 +13,7 @@
 
 <body>
    <div class="container">
+    <div class="main">
     <form action="add-student.php" method="POST">
       <div class="row">
         <div class="col-lg-3"></div>
@@ -47,6 +48,7 @@
       </div>
     </form>
 </div>
+</div>
 
   <br>
     <?php
@@ -59,6 +61,7 @@
     $result = $conn->query($sql);
     ?>
   <div class="container">
+    <div class="table-container">
     <div class="row">
       <table class="table table-border">
         <thead>
