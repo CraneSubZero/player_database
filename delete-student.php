@@ -1,6 +1,7 @@
 <?php 
 
 //get the data from the form
+$firstname = $_POST['Id'];
 $firstname = $_POST['Firstname'];
 $lastname = $_POST['Lastname'];
 $gamename = $_POST['Gamename'];

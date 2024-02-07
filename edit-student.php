@@ -1,6 +1,7 @@
 <?php 
    //create database connection
 
+   $firstname = $_POST['Id'];
    $firstname = $_POST['Firstname'];
    $lastname = $_POST['Lastname'];
    $gamename = $_POST['Gamename'];
@@ -38,32 +39,35 @@
           <div class="col-lg-3"></div>
           <div class="col-lg-4">
             <div class="mb-4">
+              <label for="FormControlInput1" class="form-label">ID:</label>
+               <input value="<?php echo $data['Id']; ?>" name="Id" type="text" class="form-control" />
+            </div>
+            <div class="mb-4">
               <label for="FormControlInput1" class="form-label">First Name:</label>
-               <input value="<?php echo $data['Firstname']; ?>" name="firstname" type="text" class="form-control" />
+               <input value="<?php echo $data['Firstname']; ?>" name="Firstname" type="text" class="form-control" />
             </div>
             <div class="mb-4">
               <label for="FormControlInput2" class="form-label">Last Name:</label>
-               <input value="<?php echo $data['Lastname']; ?>" name="lastname" type="text" class="form-control" />
-
+               <input value="<?php echo $data['Lastname']; ?>" name="Lastname" type="text" class="form-control" />
             </div>
             <div class="mb-4">
               <label for="input-group text" class="form-label">Game Name:</label>
-              <select class="form-select" name="gamename">
+              <select class="form-select" name="Gamename">
                   <option selected disabled>Select Games</option>
                   <option value="Mobile Legends: Bang Bang">Mobile Legends: Bang Bang</option>
                   <option value="League of Legends">League of Legends</option>
                   <option value="PUBG: Battlegrounds">PUBG: Battlegrounds</option>
                   <option value="Call of Duty">Call of Duty</option>
               </select>
-          </div>
+            </div>
             <div class="mb-4">
               <label for="FormControlInput1" class="form-label">IGN:</label>
-              <input value="<?php echo $data['Ign']; ?>" name="ign" type="text" class="form-control" />
+              <input value="<?php echo $data['Ign']; ?>" name="Ign" type="text" class="form-control" />
 
             </div>
             <div class="mb-4">
               <label for="FormControlInput1" class="form-label">Position:</label>
-              <input value="<?php echo $data['Position']; ?>" name="position" type="text" class="form-control" />
+              <input value="<?php echo $data['Position']; ?>" name="Position" type="text" class="form-control" />
 
             </div>
             <div class="mb-4">
