@@ -1,20 +1,35 @@
 <?php 
 
-//get the data from the form
+// Get the data from the form
 $firstname = $_POST['firstname'];
 $lastname = $_POST['lastname'];
+$gamename = $_POST['gamename'];
+$ign = $_POST['ign'];
+$position = $_POST['position'];
 
 //------------------------- INSERT DATA TO DB --------------------------
 
+// Make a connection to your database
+$conn = new mysqli("localhost", "root", "", "player_database");
 
-//1 . Make a connection to your database
-$conn = new mysqli("localhost", "root", " ", "player_database");
+// Check for connection errors
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
-// SQL STATEMENT -> Programming of lang. of database
-$sql = "INSERT INTO students (firstname, lastname) VALUES ('".$firstname."', '".$lastname."')";
+// SQL statement
+$sql = "INSERT INTO player_database (firstname, lastname, gamename, ign, position) VALUES ('$firstname', '$lastname', '$gamename', '$ign', '$position')";
 
-// is to run the sql code in php
-$conn->query($sql);
+// Run the SQL query
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
 
-//redirect
+// Close the database connection
+$conn->close();
+
+// Redirect
 header('location: index.php');
+?>

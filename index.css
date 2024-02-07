@@ -26,3 +26,7 @@ body {
     background-size: 250px, 620px;
     background-repeat: no-repeat, no-repeat;
 }
+
+table {
+    align-items: center;
+}

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 06, 2024 at 07:32 AM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 8.1.10
+-- Generation Time: Feb 07, 2024 at 02:54 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `php`
+-- Database: `player_database`
 --
 
 -- --------------------------------------------------------
@@ -28,13 +28,13 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `player_database` (
-  `ID` varchar(255) NOT NULL,
-  `FIRSTNAME` varchar(255) NOT NULL,
-  `LASTNAME` varchar(255) NOT NULL,
-  `GAMENAME` varchar(255) NOT NULL,
-  `IGN` varchar(255) NOT NULL,
-  `POSITION` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `Id` int(10) NOT NULL,
+  `Firstname` varchar(255) NOT NULL,
+  `Lastname` varchar(255) NOT NULL,
+  `Gamename` varchar(255) NOT NULL,
+  `Ign` varchar(255) NOT NULL,
+  `Position` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
