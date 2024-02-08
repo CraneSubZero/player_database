@@ -8,7 +8,6 @@ $ign = $_POST['ign'];
 $position = $_POST['position'];
 
 //------------------------- INSERT DATA TO DB --------------------------
-//------------------------ This is for the Submitting Function -----------------
 
 // Make a connection to your database
 $conn = new mysqli("localhost", "root", "", "player_database");
