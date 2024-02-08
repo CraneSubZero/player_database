@@ -19,20 +19,16 @@
           <div class="col-lg-3"></div>
           <div class="col-lg-4">
             <div class="mb-4">
-              <label for="FormControlInput1" class="form-label">ID:</label>
-              <input name="Id" type="text" class="form-control" required />
-            </div>
-            <div class="mb-4">
               <label for="FormControlInput1" class="form-label">First Name:</label>
-              <input name="Firstname" type="text" class="form-control" required />
+              <input name="firstname" type="text" class="form-control" required />
             </div>
             <div class="mb-4">
               <label for="FormControlInput2" class="form-label">Last Name:</label>
-              <input name="Lastname" type="text" class="form-control" required />
+              <input name="lastname" type="text" class="form-control" required />
             </div>
             <div class="mb-4">
               <label for="input-group text" class="form-label">Game Name:</label>
-              <select class="form-select" name="Gamename">
+              <select class="form-select" name="gamename">
                   <option selected disabled>Select Games</option>
                   <option value="Mobile Legends: Bang Bang">Mobile Legends: Bang Bang</option>
                   <option value="League of Legends">League of Legends</option>
@@ -42,11 +38,11 @@
             </div>
             <div class="mb-4">
               <label for="FormControlInput1" class="form-label">IGN:</label>
-              <input name="Ign" type="text" class="form-control" required />
+              <input name="ign" type="text" class="form-control" required />
             </div>
             <div class="mb-4">
               <label for="FormControlInput1" class="form-label">Position:</label>
-              <input name="Position" type="text" class="form-control" required />
+              <input name="position" type="text" class="form-control" required />
             </div>
             <div class="mb-4">
               <button type="submit" class="btn btn-success">Add Record</button>
@@ -71,7 +67,7 @@
       <table class="table table-sm">
         <thead>
           <tr>
-            <th scope="col">Id</th>
+            <th scope="col">#</th>
             <th scope="col">First Name</th>
             <th scope="col">Last Name</th>
             <th scope="col">Game Name</th>
@@ -83,12 +79,12 @@
 
           <?php while ($row = $result->fetch_assoc()): ?>
             <tr>
-              <td><?php echo $row['Id'];?></td>
-              <td><?php echo $row['Firstname'];?></td>
-              <td><?php echo $row['Lastname'];?></td>
-              <td><?php echo $row['Gamename'];?></td>
-              <td><?php echo $row['Ign'];?></td>
-              <td><?php echo $row['Position'];?></td>
+              <td><?php echo $row['Id'];  ?></td>
+              <td><?php echo $row['Firstname'];  ?></td>
+              <td><?php echo $row['Lastname'];  ?></td>
+              <td><?php echo $row['Gamename'];  ?></td>
+              <td><?php echo $row['Ign'];  ?></td>
+              <td><?php echo $row['Position'];  ?></td>
               <td>
                  <a href="edit-student.php?" class="btn btn-sm btn-info">Edit</a>
                  <a onclick="delete_student(<?php echo $row['Id'];  ?>)" href="#" class="btn btn-sm btn-danger">Delete</a>
