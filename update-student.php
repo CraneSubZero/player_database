@@ -1,6 +1,6 @@
 <?php 
 
-//get the data from the form
+// get the data from the form
 $id = $_GET['id'];
 $firstname = $_POST['firstname'];
 $lastname = $_POST['lastname'];
@@ -18,5 +18,7 @@ $sql = "UPDATE students SET firstname='".$firstname ."',lastname='".$lastname."'
 // is to run the sql code in php
 $conn->query($sql);
 
-//redirect
+// redirect
 header('location: index.php');
+
+// This area is for the Update, in case of editing the Database.

@@ -1,6 +1,6 @@
 <?php 
-   //create database connection
-
+   // Create database connection
+  // This is for the Edit Function 
    $firstname = $_POST['Id'];
    $firstname = $_POST['Firstname'];
    $lastname = $_POST['Lastname'];

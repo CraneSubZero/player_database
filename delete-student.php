@@ -1,6 +1,6 @@
 <?php 
 
-//get the data from the form
+// Get the data from the form
 $firstname = $_POST['Id'];
 $firstname = $_POST['Firstname'];
 $lastname = $_POST['Lastname'];
@@ -16,8 +16,10 @@ $conn = new mysqli("localhost", "root", "", "player_database");
 $sql = "DELETE FROM player_database WHERE """;
 
 
-// is to run the sql code in php
+// This is to run the sql code in php
 $conn->query($sql);
 
-//redirect
+// Redirect
 header('location: index.php');
+
+//----------------------- This is for the Delete Function -----------------
