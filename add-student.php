@@ -1,12 +1,11 @@
 <?php 
 
 // Get the data from the form
-$firstname = $_POST['Id'];
-$firstname = $_POST['Firstname'];
-$lastname = $_POST['Lastname'];
-$gamename = $_POST['Gamename'];
-$ign = $_POST['Ign'];
-$position = $_POST['Position'];
+$firstname = $_POST['firstname'];
+$lastname = $_POST['lastname'];
+$gamename = $_POST['gamename'];
+$ign = $_POST['ign'];
+$position = $_POST['position'];
 
 //------------------------- INSERT DATA TO DB --------------------------
 
@@ -19,7 +18,7 @@ if ($conn->connect_error) {
 }
 
 // SQL statement
-$sql = "INSERT INTO player_database (Id, Firstname, Lastname, Gamename, Ign, Position) VALUES ('$Id', '$Firstname', '$Lastname', '$Gamename', '$Ign', '$Position')";
+$sql = "INSERT INTO player_database (firstname, lastname, gamename, ign, position) VALUES ('$firstname', '$lastname', '$gamename', '$ign', '$position')";
 
 // Run the SQL query
 if ($conn->query($sql) === TRUE) {
