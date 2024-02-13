@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 08, 2024 at 03:01 AM
+-- Generation Time: Feb 13, 2024 at 06:54 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -37,6 +37,17 @@ CREATE TABLE `player_database` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Dumping data for table `player_database`
+--
+
+INSERT INTO `player_database` (`Id`, `Firstname`, `Lastname`, `Gamename`, `Ign`, `Position`) VALUES
+(1, 'mae', 'pacs', 'Mobile Legends: Bang Bang', 'mpacs', 'mid laner'),
+(2, 'genk', 'trocio', 'Mobile Legends: Bang Bang', 'genktrocio', 'exp laner'),
+(3, 'pres', 'wil', 'League of Legends', 'cranesubzero', 'mid laner'),
+(4, 'Elijah', 'Fernandez', 'League of Legends', 'medtech enjoyer #rajia', 'toplaner'),
+(5, 'Reuel John', 'Loquias', 'League of Legends', 'reiru #8089', 'Support');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -54,7 +65,7 @@ ALTER TABLE `player_database`
 -- AUTO_INCREMENT for table `player_database`
 --
 ALTER TABLE `player_database`
-  MODIFY `Id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
