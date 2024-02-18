@@ -53,7 +53,6 @@
     </div>
   </div>
   <br>
-  
   <?php
     //create database connection
     $conn = new mysqli("localhost", "root", "", "player_database");
@@ -62,7 +61,7 @@
     $sql = 'SELECT * FROM player_database ORDER BY player_database.`Id` DESC';
 
     $result = $conn->query($sql);
-  ?>
+    ?>
     <div class="container">
     <div class="table">
       <table class="table table-bordered">
@@ -89,31 +88,26 @@
               <td><?php echo $row['Ign'];  ?></td>
               <td><?php echo $row['Position'];  ?></td>
               <td>
-                 <a href="edit.php?" class="btn btn-sm btn-info">Edit</a>
-                 <a onclick="delete_student(<?php echo $row['Id'];  ?>)" href="#" class="btn btn-sm btn-danger">Delete</a>
+                <a href="edit-player.php?id=<?php echo $row['Id']; ?>" class="btn btn-sm btn-info">Edit</a>
+                <a onclick="delete_player(<?php echo $row['Id']; ?>)" class="btn btn-sm btn-danger">Delete</a>
               </td>
             </tr>
-
           <?php endwhile; ?>
         </tbody>
-      </table>s
+      </table>
     </div>
-
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
   </script>
 
-
-
-<script>
-
-  function delete_student(id) {
-      if (confirm("Do you want to delete this data? ")){
-       window.location = "delete-student.php?id=" + id;
+  <script>
+    function delete_player(id) {
+      if (confirm("Do you want to delete this data?")) {
+        window.location = "delete-player.php?id=" + id;
       }
-  }
-
-</script>
+    }
+  </script>
 </body>
+
 </html>
