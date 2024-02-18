@@ -14,7 +14,7 @@
 <body>
   <div class="container">
     <div class="main">
-      <form action="add-student.php" method="POST">
+      <form action="add-player.php" method="POST">
         <div class="row">
           <div class="col-lg-3"></div>
           <div class="col-lg-4">
@@ -53,18 +53,19 @@
     </div>
   </div>
   <br>
+
   <?php
     //create database connection
     $conn = new mysqli("localhost", "root", "", "player_database");
 
     //construct sql state
-    $sql = 'SELECT * FROM player_database';
+    $sql = 'SELECT * FROM player_database ORDER BY player_database.`Id` DESC';
 
     $result = $conn->query($sql);
-    ?>
+  ?>
     <div class="container">
     <div class="table">
-      <table class="table table-sm">
+      <table class="table table-bordered">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -73,12 +74,13 @@
             <th scope="col">Game Name</th>
             <th scope="col">IGN</th>
             <th scope="col">Position</th>
+            <th scope="col">Action</th>
           </tr>
           
         </thead>
         <tbody>
 
-          <?php while ($row = $result->fetch_assoc()): ?>
+      <?php while ($row = $result->fetch_assoc()): ?>
             <tr>
               <td><?php echo $row['Id'];  ?></td>
               <td><?php echo $row['Firstname'];  ?></td>
@@ -87,12 +89,12 @@
               <td><?php echo $row['Ign'];  ?></td>
               <td><?php echo $row['Position'];  ?></td>
               <td>
-                 <a href="edit-student.php?" class="btn btn-sm btn-info">Edit</a>
+                 <a href="edit.php?" class="btn btn-sm btn-info">Edit</a>
                  <a onclick="delete_student(<?php echo $row['Id'];  ?>)" href="#" class="btn btn-sm btn-danger">Delete</a>
               </td>
             </tr>
 
-          <?php endwhile; ?>
+      <?php endwhile; ?>
         </tbody>
       </table>s
     </div>
