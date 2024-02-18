@@ -53,7 +53,7 @@
     </div>
   </div>
   <br>
-
+  
   <?php
     //create database connection
     $conn = new mysqli("localhost", "root", "", "player_database");
@@ -80,7 +80,7 @@
         </thead>
         <tbody>
 
-      <?php while ($row = $result->fetch_assoc()): ?>
+          <?php while ($row = $result->fetch_assoc()): ?>
             <tr>
               <td><?php echo $row['Id'];  ?></td>
               <td><?php echo $row['Firstname'];  ?></td>
@@ -94,7 +94,7 @@
               </td>
             </tr>
 
-      <?php endwhile; ?>
+          <?php endwhile; ?>
         </tbody>
       </table>s
     </div>
@@ -103,6 +103,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
   </script>
+
 
 
 <script>
@@ -114,7 +115,5 @@
   }
 
 </script>
-
 </body>
-
 </html>
