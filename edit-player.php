@@ -1,21 +1,23 @@
 <?php 
-   // Create database connection
-  // This is for the Edit Function 
-   $firstname = $_POST['Id'];
-   $firstname = $_POST['Firstname'];
-   $lastname = $_POST['Lastname'];
-   $gamename = $_POST['Gamename'];
-   $ign = $_POST['Ign'];
-   $position = $_POST['Position'];
+   //create database connection
+
+   $id = $_GET['id'];
 
    $conn = new mysqli("localhost", "root", "", "player_database");
-   $sql = "SELECT * FROM player_database WHERE id=".$id.""; 
-
+   $sql = "SELECT * FROM player_database WHERE id=".$id."";
    $result = $conn->query($sql); 
 
    $data = $result->fetch_assoc();
+ 
+
+   
+    
+
+
+
+
   
-?>
+  ?>
 
 <!doctype html>
 <html lang="en">
@@ -34,14 +36,10 @@
 <body>
    <div class="container">
     <div class="main">
-       <form action="update-student.php?id=<?php echo $data['Id']; ?>" method="POST">
+       <form action="update-player.php?id=<?php echo $data['Id']; ?>" method="POST">
       <div class="row">
           <div class="col-lg-3"></div>
           <div class="col-lg-4">
-            <div class="mb-4">
-              <label for="FormControlInput1" class="form-label">ID:</label>
-               <input value="<?php echo $data['Id']; ?>" name="Id" type="text" class="form-control" />
-            </div>
             <div class="mb-4">
               <label for="FormControlInput1" class="form-label">First Name:</label>
                <input value="<?php echo $data['Firstname']; ?>" name="Firstname" type="text" class="form-control" />
@@ -50,16 +48,16 @@
               <label for="FormControlInput2" class="form-label">Last Name:</label>
                <input value="<?php echo $data['Lastname']; ?>" name="Lastname" type="text" class="form-control" />
             </div>
-            <div class="mb-4">
-              <label for="input-group text" class="form-label">Game Name:</label>
-              <select class="form-select" name="Gamename">
-                  <option selected disabled>Select Games</option>
-                  <option value="Mobile Legends: Bang Bang">Mobile Legends: Bang Bang</option>
-                  <option value="League of Legends">League of Legends</option>
-                  <option value="PUBG: Battlegrounds">PUBG: Battlegrounds</option>
-                  <option value="Call of Duty">Call of Duty</option>
-              </select>
-            </div>
+          <div class="mb-4">
+    <label for="input-group-text" class="form-label">Game Name:</label>
+    <select class="form-select" name="Gamename">
+        <option value="" disabled selected>Select Games</option>
+        <option value="Mobile Legends: Bang Bang"<?php if($data['Gamename'] == "Mobile Legends: Bang Bang") echo " selected"; ?>>Mobile Legends: Bang Bang</option>
+        <option value="League of Legends"<?php if($data['Gamename'] == "League of Legends") echo " selected"; ?>>League of Legends</option>
+        <option value="PUBG: Battlegrounds"<?php if($data['Gamename'] == "PUBG: Battlegrounds") echo " selected"; ?>>PUBG: Battlegrounds</option>
+        <option value="Call of Duty"<?php if($data['Gamename'] == "Call of Duty") echo " selected"; ?>>Call of Duty</option>
+    </select>
+</div>
             <div class="mb-4">
               <label for="FormControlInput1" class="form-label">IGN:</label>
               <input value="<?php echo $data['Ign']; ?>" name="Ign" type="text" class="form-control" />
