@@ -61,6 +61,7 @@
     $sql = 'SELECT * FROM player_database ORDER BY player_database.`Id` DESC';
 
     $result = $conn->query($sql);
+
     ?>
     <div class="container">
     <div class="table">
