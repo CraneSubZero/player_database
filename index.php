@@ -88,8 +88,8 @@
               <td><?php echo $row['Ign'];  ?></td>
               <td><?php echo $row['Position'];  ?></td>
               <td>
-                <a href="edit-player.php?id=<?php echo $row['Id']; ?>" class="btn btn-sm btn-info">Edit</a>
-                <a onclick="delete_player(<?php echo $row['Id']; ?>)" class="btn btn-sm btn-danger">Delete</a>
+                  <a href="edit-player.php?id=<?php echo $row['Id']; ?>" class="btn btn-sm btn-info btn-edit">Edit</a>
+                  <a onclick="delete_player(<?php echo $row['Id']; ?>)" class="btn btn-sm btn-danger btn-delete">Delete</a>
               </td>
             </tr>
           <?php endwhile; ?>

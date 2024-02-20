@@ -33,3 +33,18 @@ body {
 table {
     align-items: center;
 }
+
+.btn-edit {
+    background-color: #3498db;
+    color: #fff;
+  }
+
+  .btn-delete {
+    background-color: #e74c3c;
+    color: #fff;
+  }
+
+  .btn-edit:hover,
+  .btn-delete:hover {
+    filter: brightness(90%);
+  }
