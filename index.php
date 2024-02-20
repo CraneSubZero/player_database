@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-
+<head> 
+      <!-- This is for the index.css -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Player-List Management System</title>
@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container"> <!-- This is for the Fill up forms -->
     <div class="main">
       <form action="add-player.php" method="POST">
         <div class="row">
@@ -102,7 +102,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
   </script>
 
-  <script>
+  <script> // This is for the Delete Data back at Line 93.
     function delete_player(id) {
       if (confirm("Do you want to delete this data?")) {
         window.location = "delete-player.php?id=" + id;
